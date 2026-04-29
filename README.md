@@ -1,13 +1,14 @@
-# Eventora - Full-Stack Event Booking Platform
+# Venuo - Full-Stack Event Booking Platform
 
-Eventora is a full-stack MERN application that allows users to seamlessly browse, register, and pay natively without any third party tools. It features an administrative dashboard for event organizers to create and manage free and paid events. All bookings can be managed manually by an admin to handle payments directly.
+Venuo is a full-stack MERN application that allows users to seamlessly browse, register, and pay natively without any third party tools. It features an administrative dashboard for event organizers to create and manage free and paid events. All bookings can be managed manually by an admin to handle payments directly.
 
 ## Features
+
 - **User Authentication**: Secure login & registration with JWT and bcrypt.
-- **2FA OTP Verification**: 
+- **2FA OTP Verification**:
   - Mandatory Email OTP to activate your account upon Registration (or delayed login attempts).
   - Mandatory Email OTP to finalize and secure event ticket booking.
-- **Role-Based Access**: 
+- **Role-Based Access**:
   - **Admin**: Create, edit, and delete events. Confirm and reject all incoming booking requests, mark them as 'Paid' or 'Not Paid'. Access is strictly locked to database-flagged users only.
   - **User**: Browse events, submit ticket booking requests via OTP, view personal dashboard pending status, and cancel bookings.
 - **Event Management**: Create free and paid events with detailed descriptions, external image URLs, dates, categories, and seating capacity.
@@ -24,25 +25,30 @@ Eventora is a full-stack MERN application that allows users to seamlessly browse
 ## 🚀 Setup Instructions
 
 ### Prerequisites
+
 Make sure you have [Node.js](https://nodejs.org/) installed on your machine.
 You will also need a MongoDB database (e.g., [MongoDB Atlas Free Tier](https://www.mongodb.com/cloud/atlas/register)).
 
 ### 1. Environment Variables Configuration
+
 Navigate to `server/.env` and fill in the necessary keys:
+
 ```env
 MONGO_URI=your_mongodb_connection_string
-JWT_SECRET=supersecretjwtkey_eventora
+JWT_SECRET=supersecretjwtkey_venuo
 EMAIL_USER=your_gmail_address
 EMAIL_PASS=your_gmail_app_password
 PORT=5000
 ```
+
 > **Note**: For `EMAIL_PASS`, you need to generate an "App Password" from your Google Account settings, standard passwords won't work due to 2FA.
 
 ### 2. Run from Outer Folder (Single Terminal)
+
 You can now manage both backend and frontend from the project root:
 
 ```bash
-# from Eventora root
+# from Venuo  root
 npm install
 npm run install:all
 npm run dev
@@ -53,31 +59,39 @@ npm run dev
 - `npm run start` runs backend `start` + frontend `preview` together.
 
 ### 3. Install Dependencies
+
 Open two separate terminals for the backend and frontend.
 
 **Backend Terminal:**
+
 ```bash
 cd server
 npm install --legacy-peer-deps
 ```
 
 **Frontend Terminal:**
+
 ```bash
 cd client
 npm install
 ```
 
 ### 4. Run the Application Local Servers
+
 **Run Backend:**
+
 ```bash
 cd server
 npm run dev
 ```
-*(Server will run on `http://localhost:5000`)*
+
+_(Server will run on `http://localhost:5000`)_
 
 **Run Frontend:**
+
 ```bash
 cd client
 npm run dev
 ```
-*(Client will run on a local port provided by Vite, typically `http://localhost:5173`)*
+
+_(Client will run on a local port provided by Vite, typically `http://localhost:5173`)_
