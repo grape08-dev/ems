@@ -8,16 +8,16 @@ const Booking = require('./models/Booking');
 dotenv.config();
 
 const users = [
-    { name: 'Admin User', email: 'admin@venuo .com', password: 'password123', role: 'admin' },
-    { name: 'Demo User', email: 'user@venuo .com', password: 'password123', role: 'user' },
-    { name: 'Alice Smith', email: 'alice@venuo .com', password: 'password123', role: 'user' },
-    { name: 'Bob Johnson', email: 'bob@venuo .com', password: 'password123', role: 'user' },
-    { name: 'Charlie Dave', email: 'charlie@venuo .com', password: 'password123', role: 'user' },
-    { name: 'Diana Prince', email: 'diana@venuo .com', password: 'password123', role: 'user' },
-    { name: 'Ethan Hunt', email: 'ethan@venuo .com', password: 'password123', role: 'user' },
-    { name: 'Fiona Gallagher', email: 'fiona@venuo .com', password: 'password123', role: 'user' },
-    { name: 'George Miller', email: 'george@venuo .com', password: 'password123', role: 'user' },
-    { name: 'Hannah Montana', email: 'hannah@venuo .com', password: 'password123', role: 'user' }
+    { name: 'Admin User', email: 'admin@venuo.com', password: 'password123', role: 'admin' },
+    { name: 'Demo User', email: 'user@venuo.com', password: 'password123', role: 'user' },
+    { name: 'Alice Smith', email: 'alice@venuo.com', password: 'password123', role: 'user' },
+    { name: 'Bob Johnson', email: 'bob@venuo.com', password: 'password123', role: 'user' },
+    { name: 'Charlie Dave', email: 'charlie@venuo.com', password: 'password123', role: 'user' },
+    { name: 'Diana Prince', email: 'diana@venuo.com', password: 'password123', role: 'user' },
+    { name: 'Ethan Hunt', email: 'ethan@venuo.com', password: 'password123', role: 'user' },
+    { name: 'Fiona Gallagher', email: 'fiona@venuo.com', password: 'password123', role: 'user' },
+    { name: 'George Miller', email: 'george@venuo.com', password: 'password123', role: 'user' },
+    { name: 'Hannah Montana', email: 'hannah@venuo.com', password: 'password123', role: 'user' }
 ];
 
 const events = [
@@ -85,7 +85,7 @@ const events = [
 
 const seedDatabase = async () => {
     try {
-        await mongoose.connect(process.env.MONGO_URI || 'mongodb://localhost:27017/venuo ');
+        await mongoose.connect(process.env.MONGO_URI || 'mongodb://localhost:27017/venuo');
         console.log('\n✅ MongoDB connection open...');
 
         await User.deleteMany();
@@ -160,8 +160,8 @@ const seedDatabase = async () => {
 
         console.log('\n🚀 Database seeded successfully!');
         console.log('-------------------------------------------');
-        console.log('Admin Email: admin@venuo .com');
-        console.log('User Email:  user@venuo .com');
+        console.log('Admin Email: admin@venuo.com');
+        console.log('User Email:  user@venuo.com');
         console.log('Password for all users: password123');
         console.log('-------------------------------------------\n');
 
